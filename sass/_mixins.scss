@@ -1,0 +1,102 @@
+@mixin container {
+    .container2{
+        &__nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 4rem;
+            border-bottom: 1px solid grey;
+        }
+        &__text{
+            font-size: 2rem;
+            font-weight: 600;
+            font-family: $font-display;
+            text-transform: uppercase;
+            color: #f3c26b;
+            letter-spacing: 3px;
+        }
+        
+        &__lists{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            
+    
+            a.selected{
+                border-bottom: 2px solid #f3c26b;
+                padding-bottom: 10px;
+                color: #f3c26b;
+            }
+    
+            
+            &--item{
+                margin-right: 6rem;
+    
+                &:link{
+                    color: #000;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-weight: 200;
+                    font-size: 1.5rem;
+                    font-family: $font-display;
+                    cursor: pointer;
+                    
+                }
+                &:visited{
+                    font-family: $font-display;
+                    color: #000;
+                    
+                }
+                &:active{
+                    font-family: $font-display;
+                    color: #000;
+                    
+                }
+                &:hover{
+                    color: #f3c26b;
+                   
+                }
+    
+            }
+        }
+    }   
+}
+@mixin main{
+    padding: 8rem 10rem ;
+
+    &__like{
+        text-align: center !important;
+    
+        &-1{
+            display: block;
+            color: #f3c26b;
+            text-transform: capitalize;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 2rem;
+            line-height: 0.75;
+            position: relative;
+
+        }
+        &-2{
+            display: block;
+            color: #444;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            letter-spacing: 1px;
+            
+        }
+    }
+}
+@mixin refresh{
+    .reload{
+        text-decoration: none;
+        cursor: pointer;
+        color: #f3c26b;
+    }
+}
